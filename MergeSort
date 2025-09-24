@@ -1,0 +1,157 @@
+package maait;
+
+import java.util.Arrays;
+
+public class MergeSort1 {
+	
+//	public static int[] Merge(int[] array1, int[] array2) {
+//		int[] combined = new int[array1.length + array2.length];
+//		int index = 0;
+//		int i = 0;
+//		int j = 0;
+//		while (i < array1.length && j < array2.length) {
+//			if (array1[i] < array2[j]) {
+//				combined[index] = array1[i];
+//				index++;
+//				i++;
+//			} else {
+//				combined[index] = array2[j];
+//				index++;
+//				j++;
+//			}
+//		}
+//		while (i < array1.length) {
+//			combined[index] = array1[i];
+//			index++;
+//			i++;
+//		}
+//		while (j < array2.length) {
+//			combined[index] = array2[j];
+//			index++;
+//			j++;
+//		}
+//		return combined;
+//	}
+//	public static int[] mergeSort(int[] array) {
+//		if(array.length==1)return array;
+//		int midIndex=array.length/2;
+//		int[] left=mergeSort(Arrays.copyOfRange(array, 0,midIndex));
+//		int[] right=mergeSort(Arrays.copyOfRange(array, midIndex, array.length));
+//		return Merge(left,right);
+//	}
+//	public static void main (String[] args) {
+//	
+//	int[] originalArray= {9,5,6,1,2,4,3,7,8};
+//	int[] sortedArray=mergeSort(originalArray);
+//	System.out.println("original Array:"+Arrays.toString(originalArray));
+//	System.out.println(" sorted Array:"+Arrays.toString(sortedArray));
+//}
+//}
+
+//	public static void main(String[] args) {
+//		int[] array1 = { 2, 5, 4, 1 };
+//		int[] array2 = { 3, 6, 7, 8 };
+//		Arrays.sort(array1);
+//		Arrays.sort(array2);
+//		System.out.println(Arrays.toString(Merge(array1, array2)));
+//	}
+//}
+//	public static int[] Merge(int[] array1, int[] array2) {
+//		int[] combined = new int[array1.length + array2.length];
+//		int index = 0;
+//		int i = 0;
+//		int j = 0;
+//		while (i < array1.length && j < array2.length) {
+//			if (array1[i] < array2[j]) {
+//				combined[index] = array1[i];
+//				index++;
+//				i++;
+//			} else {
+//				combined[index] = array2[j];
+//				index++;
+//				j++;
+//			}
+//		}
+//		while (i < array1.length) {
+//			combined[index] = array1[i];
+//			index++;
+//			i++;
+//		}
+//		while (j < array2.length) {
+//			combined[index] = array2[j];
+//			index++;
+//			j++;
+//		}
+//		return combined;
+//	}
+
+//	public static void main(String[] args) {
+//		int[] array1 = { 90, 93, 91, 94 };
+//		int[] array2 = { 95, 96, 92, 97 };
+//		Arrays.sort(array1);
+//		Arrays.sort(array2);
+//		System.out.println(Arrays.toString(Merge(array1, array2)));
+//	}
+//}
+//	public static int[] mergeSort(int[] array) {
+//		if (array.length == 1)
+//			return array;
+//		int midIndex = array.length / 2;
+//		int[] left = mergeSort(Arrays.copyOfRange(array, 0, midIndex));
+//		int[] right = mergeSort(Arrays.copyOfRange(array, midIndex, array.length));
+//		return Merge(left, right);
+//	}
+
+//	public static void main(String[] args) {
+//		int[] originalArray = { 3, 1, 4, 2 };
+//		int[] sortedArray = mergeSort(originalArray);
+//		System.out.println("\n original Array:" + Arrays.toString(originalArray));
+//		System.out.println("\n sorted Array:" + Arrays.toString(sortedArray));
+//	}
+//}
+public static int[] MergeSort(int[] array1,int[] array2) {
+	int[] combined=new int[array1.length+array2.length];
+	int index=0;
+	int i=0;
+	int j=0;
+	while(i<array1.length&&j<array2.length) {
+		if(array1[i]<array2[j]) {
+			combined[index]=array1[i];
+		} else {
+			combined[index]=array2[j];
+		}
+	}
+	while(i<array1.length) {
+		combined[index]=array1[i];
+	}
+	while(j<array2.length) {
+		combined[index]=array2[j];
+	}
+	return combined;
+		
+	}
+
+//public static void main (String[] args) {
+//	int[] array1= {2,5,4,1,};
+//	int[] array2= {3,6,7,8};
+//	Arrays.sort(array1);
+//	Arrays.sort(array2);
+//	System.out.println(Arrays.toString(MergeSort(array1,array2)));
+//}
+//}
+public static int[] mergeSort(int[] array) {
+	if(array.length==1) {
+	return array;
+	int midIndex=array.length/2;
+	int[] left=mergeSort(Arrays.copyOfRange(array, 0,midIndex));
+	int[] right=mergeSort(Arrays.copyOfRange(array,midIndex,array.length));
+	return MergeSort(left,right);
+	}
+
+	public static void main (String[] args) {
+		int[] originalArray= {3,5,2,1,4};
+		int[] sortedArray=originalArray(sortedArray);
+		System.out.println("\n originalArray:"+Arrays.toString(originalArray));
+		System.out.println("\n sortedArray:"+Arrays.toString(sortedArray));
+	}
+}
