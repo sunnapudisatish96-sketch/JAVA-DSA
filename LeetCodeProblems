@@ -1,0 +1,750 @@
+package maait;
+
+import java.util.Arrays;
+
+public class LeetCodeProblems {
+
+//	public static int removeElement(int[] nums,int val) {
+//		int i=0;
+//		for(int j=0;j<nums.length;j++) {
+//			if(nums[j]!=val) {
+//				nums[i]=nums[j];
+//				i++;
+//			}
+//		}
+//		return val;
+//	}
+//	public static int removeElement(int[] nums,int val) {
+//		int i=0;
+//		for (int j=0;j<nums.length;j++) {
+//			if(nums[i]!=val) {
+//				nums[i]=nums[j];
+//				i++;
+//			}
+//		}
+//		return val;
+//	}
+//
+//public static void main (String[] args) {
+//	int[] nums= {3,2,2,1,9,6,4};
+//	int value=2;
+//	removeElement(nums,value);
+//	System.out.println(Arrays.toString(nums));
+//}
+//}
+//	public static String findLongestString(String[] stringList) {
+//		String longestString= "";
+//		for (String str:stringList) { 
+//			if(str.length()> longestString.length()) {
+//			longestString=str;
+//		}
+//		}
+//	
+//	return longestString;
+//}
+//public static String findLongestString(String[] stringList) {
+//	String longestString="";
+//	for (String str:stringList) {
+//		if(str.length()>longestString.length()) {
+//			longestString=str;
+//		}
+//	}
+//		return longestString;
+//	
+//	
+//}
+//	public static String findLongestString(String[] stringList) {
+//		String LongestString="";
+//		for (String str:stringList) {
+//			if(str.length()>LongestString.length()) {
+//				LongestString=str;
+//				
+//			}
+//		}
+//		return LongestString;
+//	}
+//	public static int[] findMaxMin(int[] mylist) {
+//		int maximum = mylist[0];
+//		int minimum = mylist[0];
+//		for (int num : mylist) {
+//			if (num > maximum) {
+//				maximum = num;
+//			} else if (num < minimum) {
+//				minimum = num;
+//			}
+//		}
+//		return new int[] { maximum, minimum };
+//	}
+//	public static int[] findMaxMin(int[] mylist) {
+//		int maximum=mylist[0];
+//		int minimum=mylist[0];
+//		for (int num:mylist) {
+//			if(num>maximum) {
+//				maximum=num;
+//			} else if(num<minimum) {
+//				minimum=num;
+//			}
+//		}
+//		return new int[] {maximum,minimum};
+//	}
+//public static int[] findMaxMin(int[] mylist) {
+//	int maximum=mylist[0];
+//	int minimum=mylist[0];
+//	for (int num: mylist) {
+//		if(num>maximum) {
+//			maximum=num;
+//		} else if(num<minimum) {
+//			minimum=num;
+//		}
+//	}
+//	return new int[] {maximum,minimum};
+//	
+//}
+//	public static int removeDuplicates(int[] nums) {
+//		if(nums.length==0) {
+//			return 0;
+//		}
+//		int writePointer=1;
+//		for (int readPointer=1; readPointer<nums.length;readPointer++) {
+//			if (nums[readPointer] != nums[readPointer-1]) {
+//				nums [writePointer]=nums [readPointer];
+//				writePointer++;
+//			}
+//			
+//		}
+//		return writePointer++;
+//	}
+//	public static int removeDuplicates(int[] nums) {
+//	    if (nums.length == 0) return 0;
+//
+//	    int i = 0;
+//	    for (int j = 1; j < nums.length; j++) {
+//	        if (nums[j] != nums[i]) {
+//	            i++;
+//	            nums[i] = nums[j];
+//	        }
+//	    }
+//	    return i+1;
+//	}
+//	public static int removeDuplicate(int[] nums) {
+//		if(nums.length==0)return 0;
+//		int i=0;
+//		for (int j=1;j<nums.length;j++) {
+//			if(nums[j]!=nums[i]) {
+//				i++;
+//				nums[i]=nums[j];
+//			}
+//		}
+//		return i+1;
+//	}
+
+	public static void main (String[] args) {
+		int[] nums= {1,2,2,3,3,4,5};
+		int results=removeDuplicates(nums);
+		System.out.println("Removed duplicates:"+Arrays.toString(Arrays.copyOfRange(nums,0,results)));
+	}
+}
+//	public static void main(String[] args) {
+//		int[] mylist = { 88, 2, 1, 4 };
+//		int[] results = findMaxMin(mylist);
+//		System.out.println("To findMaxMin:"+ Arrays.toString(results));
+//	}
+//}
+
+//public static void main (String[] args) {
+//	String[] stringlist1= {"Apple","Bannanaaaa","Rajesh","Amma"};
+//	String result=findLongestString(stringlist1);
+//	System.out.println("Longest String:"+result);
+//}
+//}
+//	public static int removeElement(int[] nums, int val) {
+//		int i = 0;
+//		for (int j = 0; j < nums.length; j++) {
+//			if (nums[j] != val) {
+//				nums[i] = nums[j];
+//				i++;
+//			}
+//
+//		}
+//		return i;
+//	}
+
+//	public static void main(String[] args) {
+//
+//		int[] nums1 = { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
+//		int val1 = 1;
+//		int newLength1 = removeElement(nums1, val1);
+//		System.out.println("Test case 1: Modified array: " + Arrays.toString(Arrays.copyOfRange(nums1, 0, newLength1))
+//				+ "\nNew length: " + newLength1);
+//
+//		int[] nums2 = { 1, 2, 3, 4, 5, 6 };
+//		int val2 = 6;
+//		int newLength2 = removeElement(nums2, val2);
+//		System.out.println("Test case 2: Modified array: " + Arrays.toString(Arrays.copyOfRange(nums2, 0, newLength2))
+//				+ "\nNew length: " + newLength2);
+//
+//	}
+//}
+package maait;
+
+public class LeetCode {
+	private Node head;
+	private Node tail;
+	private int length;
+	private Node next;
+
+	class Node {
+		int value;
+		Node next;
+
+		Node(int value) {
+			this.value = value;
+		}
+	}
+
+	public LeetCode(int value) {
+		Node newNode = new Node(value);
+		head = newNode;
+		tail = newNode;
+		length = 1;
+	}
+
+	public Node getHead() {
+		return head;
+	}
+
+	public Node getTail() {
+		return tail;
+	}
+
+	public int getLength() {
+		return length;
+	}
+
+	public void makeEmpty() {
+		head = null;
+		tail = null;
+		length = 0;
+	}
+
+	public void printList() {
+		Node temp = head;
+		while (temp != null) {
+			System.out.println(temp.value);
+			temp = temp.next;
+		}
+	}
+
+	public void printAll() {
+		if (length == 0) {
+			System.out.println("Head: null");
+			System.out.println("Tail: null");
+		} else {
+			System.out.println("Head: " + head.value);
+			System.out.println("Tail: " + tail.value);
+		}
+		System.out.println("Length:" + length);
+		System.out.println("\nLinked List:");
+		if (length == 0) {
+			System.out.println("empty");
+		} else {
+			printList();
+		}
+	}
+
+	public void append(int value) {
+		Node newNode = new Node(value);
+		if (length == 0) {
+			head = newNode;
+			tail = newNode;
+		} else {
+			tail.next = newNode;
+			tail = newNode;
+			length++;
+		}
+	}
+
+//	public void merge(LeetCode otherList) {
+//		Node otheHead = otherList.getHead();
+//		Node dummy = new Node(0);
+//		Node current = dummy;
+//		while (head != null && otheHead != null) {
+//			if (head.value < otheHead.value) {
+//				current.next = head;
+//				head = head.next;
+//			} else {
+//				current.next = otheHead;
+//				otheHead = otheHead.next;
+//			}
+//			current = current.next;
+//		}
+//		if (head != null) {
+//			current.next = head;
+//		} else {
+//			current.next = otheHead;
+//			tail = otherList.getTail();
+//		}
+//		head = dummy.next;
+//		length += otherList.getLength();
+//
+//	}
+//}
+//	public void merge(LeetCode otherList) {
+//		Node head=otherList.getHead();
+//		Node dummy=new Node(0);
+//		Node current=dummy;
+//		while(head !=null && otherHead!=null) {
+//			if(head.value<otherHead.value) {
+//				current.next=head;
+//				head=current.next;
+//			} else {
+//				current.next=otherHead;
+//				otherHead=current.next;
+//			}
+//			if(head!=null) {
+//				current.next=head;
+//			} else {
+//				current.next=therHead;
+//				tail=otherList.getTail();
+//			}
+//			head=dummy.next;
+//			length += otherList.getLength();
+//		}
+//	}
+//}
+package maait;
+
+import maait.LeetCode.Node;
+
+public class LinkedList111 {
+	private Node head;
+	private Node tail;
+	private int length;
+	private Node next;
+
+	class Node {
+		int value;
+		Node next;
+
+		Node(int value) {
+			this.value = value;
+		}
+	}
+
+	public LinkedList111(int value) {
+		Node newNode = new Node(value);
+		head = newNode;
+		tail = newNode;
+		length = 1;
+	}
+
+	public Node getHead() {
+		return head;
+	}
+
+	public Node getTail() {
+		return tail;
+	}
+
+	public int getLength() {
+		return length;
+	}
+
+	public void makeEmpty() {
+		head = null;
+		tail = null;
+		length = 0;
+	}
+
+	public void printList() {
+		Node temp = head;
+		while (temp != null) {
+			System.out.println(temp.value);
+			temp = temp.next;
+		}
+	}
+
+	public void printAll() {
+		if (length == 0) {
+			System.out.println("Head: null");
+			System.out.println("Tail: null");
+		} else {
+			System.out.println("Head: " + head.value);
+			System.out.println("Tail: " + tail.value);
+		}
+		System.out.println("Length:" + length);
+		System.out.println("\nLinked List:");
+		if (length == 0) {
+			System.out.println("empty");
+		} else {
+			printList();
+		}
+	}
+
+	public void append(int value) {
+		Node newNode = new Node(value);
+		if (length == 0) {
+			head = newNode;
+			tail = newNode;
+		} else {
+			tail.next = newNode;
+			tail = newNode;
+			length++;
+		}
+	}
+
+
+//	public void bubbleSort() {
+//		if (this.length < 2)
+//			return;
+//		Node sortedUntil = null;
+//		while (sortedUntil != this.head.next) {
+//			Node current = head;
+//			while (current.next != sortedUntil) {
+//				Node nextNode = current.next;
+//				if (current.value > nextNode.value) {
+//					int temp = current.value;
+//					current.value = nextNode.value;
+//					nextNode.value = temp;
+//				}
+//				current=current.next;
+//			}
+//			sortedUntil=current;
+//		}
+//	}
+//}
+//public void bubbleSort() {
+//	if(this.length<2) {
+//		Node sortedUntil=null;
+//		while(sortedUntil!=this.head.next) {
+//			Node current=head;
+//			while(current.next!=sortedUntil) {
+//				Node nextNode=current.next;
+//				if(current.value>nextNode.value) {
+//					int temp=current.value;
+//					current.value=nextNode.value;
+//					nextNode.value=temp;
+//				}
+//				current=current.next;
+//			}
+//			sortedUntil=current;
+//		}
+//	}
+//}
+//	public void  bubbleSort() {
+//		if(this.length<2) {
+//			Node sortedUntil=null;
+//while(sortedUntil !=this.head.next) {
+//	Node current=head;
+//	while(current.next!=sortedUntil) {
+//		Node nextNode=current.next;
+//		if(current.value>nextNode.value) {
+//			int temp=current.value;
+//			current.value=nextNode.value;
+//			nextNode.value=temp;
+//			
+//		}
+//		current=current.next;
+//	}
+//	sortedUntil=current;
+//}
+//	
+//}
+//		}
+//	}
+//	public void bubbleSort() {
+//		if(this.length<2)
+//			Node sortedUntil=null;
+//		while(sortedUntil!= this.head.next) {
+//			Node current=head;
+//			while(current.next!=sorteUntil) {
+//		Node nextNode=current.value;
+//		if(current.value>nextNode.value) {
+//			int temp=current.value;
+//			current.value=nextNode.value;
+//			nextNode.value=temp;
+//		}
+//		current=current.next;
+//			}
+//			sorteUntil=current;
+//		}
+//	}
+//	public void selectionSort() {
+//		if(this.length<2)
+//			return;
+//		Node current=this.head;
+//		while(current.next!=null) {
+//			Node smallest=current;
+//			Node innerCurrent=current.next;
+//			while(innerCurrent!=null) {
+//				if(innerCurrent.value<smallest.value) {
+//					smallest=innerCurrent;
+//				}
+//				innerCurrent=innerCurrent.next;
+//				
+//			}
+//			if(smallest !=current) {
+//				int temp=current.value;
+//				current.value=smallest.value;
+//				smallest.value=temp;
+//			}
+//			current=current.next;
+//		}
+//	}
+//}
+//	public void selectionSort() {
+//	if (this.length<2) {
+//		Node current=head;
+//		while(current.next!=null) {
+//			Node smallest=current;
+//			Node innerCurrent=current.next;
+//			while(innerCurrent!=null) {
+//				if(innerCurrent.value<smallest.value) {
+//					smallest=innerCurrent;
+//				}
+//				innerCurrent=innerCurrent.next;
+//			}
+//			if(smallest!=null) {
+//				int temp=current.value;
+//				current.value=smallest.value;
+//				smallest.value=temp;
+//			}
+//			current=current.next;
+//		}
+//	}
+//	}
+//}
+//	public Node selectionSort() {
+//	if(this.length<2)
+//		Node current=head;
+//	while(current.next!=null) {
+//		Node smallest=current;
+//		Node innercurrent=current.next;
+//		while(innercurrent!=null) {
+//			if(innercurrent.value<smallest.value) {
+//				smallest=innercurrent;
+//			}
+//			innercurrent=innercurrent.next;
+//		}
+//		if(smallest!=current) {
+//			int temp=current.value;
+//			current.value=smallest.value;
+//			smallest.value=temp;
+//		}
+//		current=current.next;
+//	}
+//	}
+//}
+//	
+//public void insertionSort() {
+//	if(length<2) {
+//		return ;
+//	}
+//	Node sortedListHead=head;
+//	Node unsortedListHead=head.next;
+//	sortedListHead.next=null;
+//	while(unsortedListHead !=null) {
+//		Node current=unsortedListHead;
+//		unsortedListHead=unsortedListHead.next;
+//		if(current.value<sortedListHead.value) {
+//			current.next=sortedListHead;
+//			sortedListHead=current;
+//		} else {
+//			Node searchPointer=sortedListHead;
+//			while(searchPointer.next!=null && current.value>searchPointer.next.value) {
+//				searchPointer=searchPointer.next;
+//			}
+//			
+//		}
+//		head=sortedListHead;
+//		Node temp=head;
+//		while(temp.next!=null) {
+//			temp=temp.next;
+//		}
+//		tail=temp;
+//			
+//		}
+//	}
+//}
+//	public void insertionSort() {
+//		if (length < 2) {
+//			return;
+//		}
+//		Node sortedListHead = head;
+//		Node unsortedListHead = head.next;
+//		sortedListHead = null;
+//
+//		while (unsortedListHead != null) {
+//			Node current = unsortedListHead.next;
+//			if (current.value < sortedListHead.value) {
+//				current.next = sortedListHead;
+//				sortedListHead = current;
+//			} else {
+//				Node searchPointer = sortedListHead;
+//				if (searchPointer.next = null && current.value > searchPointer.next.value) {
+//					searchPointer = searchPointer.next;
+//				}
+//			}
+//			 sortedListHead = head;
+//			Node temp = head;
+//			while (temp.next != null) {
+//				temp = temp.next;
+//			}
+//			tail=temp;
+//		}
+//	}
+//}
+//	public void insertionSort() {
+//		if(length<2) {
+//			return;
+//		}
+//		Node sortedListHead=head;
+//		Node unsortedListHead=head.next;
+//		sortedListHead.next=null;
+//		while(unsortedListHead!=null) {
+//			Node current=unsortedListHead;
+//			unsortedListHead=unsortedListHead.next;
+//			if(current.value<sortedListHead.value) {
+//				current.next=sortedListHead;
+//				sortedListHead=current;
+//			} else {
+//				Node searchPointer=sortedListHead;
+//				if(searchPointer.next!=null && current.value>searchPointer.next.value) {
+//					searchPointer=searchPointer.next;
+//				}
+//					
+//				}
+//			head=sortedListHead;
+//			Node temp=head;
+//			while(temp.next!=null) {
+//				temp=temp.next;
+//			}
+//			tail=temp;
+//			}
+//		
+//		}
+//	}
+package maait;
+import java.util.ArrayList;
+import java.util.Stack;
+public class Bst {
+	private Node root;
+	private Object node;
+	class Node {
+		public int length;
+		public Node right;
+		public Node left;
+		public int value;
+	private	Node (int value){
+			this.value=value;
+		}
+	}
+	public Node  getRoot() {
+		return root;
+		
+	}
+
+
+	public boolean insert(int value) {
+        Node newNode = new Node(value);
+        if (root == null) {
+            root = newNode;
+            return true;
+        }
+        Node temp = root;
+        while (true) {
+            if (newNode.value == temp.value) return false;
+            if (newNode.value < temp.value) {
+                if (temp.left == null) {
+                    temp.left = newNode;
+                    return true;
+                }
+                temp = temp.left;
+            } else {
+                if (temp.right == null) {
+                    temp.right = newNode;
+                    return true;
+                }
+                temp = temp.right;
+            }
+        }
+	}
+	
+		
+
+public ArrayList<Integer> DFSInOrder() {
+    ArrayList<Integer> results = new ArrayList<>();
+
+    class Traverse {
+        Traverse(Node currentNode) {
+            if (currentNode.left != null) {
+                new Traverse(currentNode.left);
+            }
+            results.add(currentNode.value);
+            if (currentNode.right != null) {
+                new Traverse(currentNode.right);
+            }
+        }
+    }
+    
+    new Traverse(root);
+    return results;
+}
+
+//public boolean isValidBST() {
+//	ArrayList<Integer>nodeValue=DFSInOrder();
+//	for (int i=1;i<nodeValue.size();i++) {
+//		if(nodeValue.get(i)<=nodeValue.get(i-1));
+//		return false;
+//		
+//	}
+//	return true;
+//}
+//}
+//public boolean  isValidBST() {
+//	ArrayList<Integer>nodeValue=DFSInOrder();
+//	for (int i=1;i<nodeValue.size();i++) {
+//		if(nodeValue.get(i)<=nodeValue.get(i-1));
+//		return false;
+//		
+//	}
+//	return true;
+//}
+//	
+//}
+
+//public Integer kthSmallest(int k){
+//	Stack<Node>stack=new Stack<>();
+//	Node node=this.root;
+//	while(!stack.isEmpty()|| node!=null) {
+//		while(node!=null) {
+//			stack.push(node);
+//			node=node.left;
+//		}
+//		node=stack.pop();
+//		k -=1;
+//		if(k==0) {
+//			return node.value;
+//		}
+//		node=node.right;
+//	}
+//
+//return null;
+//}
+//}
+public Integer kthSmallest(int k) {
+	Stack<Node>stack=new Stack<>();
+	Node node=this.root;
+	while(!stack.isEmpty()|| node!=null) {
+		while(node!=null) {
+			stack.push(node);
+			node=node.left;
+		}
+		node=stack.pop();
+		 k -=1;
+		 if(k==0) {
+			 return node.value;
+		 }
+	}
+	return null;
+}
